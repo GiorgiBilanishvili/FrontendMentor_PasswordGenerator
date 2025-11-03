@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+}
+
+body {
+  background-color: black;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+.main_container h1 {
+  color: rgb(143, 143, 144);
+  font-size: 25px;
+}
+
+/* Password input container */
+.password_form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password_input {
+  width: 400px;
+  height: 50px;
+  font-size: 30px;
+  padding-left: 20px;
+  background-color: rgb(44, 44, 44);
+  color: white;
+  border: 1px solid rgb(44, 44, 44);
+}
+
+.password_input:focus {
+  outline: 2px solid #777;
+}
+
+.CopyPaste_icon {
+  position: absolute;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.CopyPaste_icon:hover {
+  transform: scale(1.1);
+}
+
+/* Generate container */
+.GENERATE_container {
+  color: antiquewhite;
+  background-color: rgb(44, 44, 44);
+  width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.character_length_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.character_length_container label {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.character_length_number {
+  color: rgb(157, 255, 157);
+  font-weight: bold;
+  text-align: right;
+  margin-top: -30px;
+  font-size: 30px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: rgb(157, 255, 157);
+  cursor: pointer;
+}
+
+/* radio_buttons_container */
+
+.radio_buttons_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.radio_buttons_container form input {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgb(255, 255, 255);
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  padding-left: 2px;
+}
+.radio_buttons_container form input:hover {
+  background-color: rgb(157, 255, 157);
+}
+.radio_buttons_container form input:checked {
+  background-color: rgb(157, 255, 157);
+}
+.radio_buttons_container form input:checked::after {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-size: 10px;
+
+  font-weight: bolder;
+}
+
+/* strength_medium_container container */
+
+.strength_medium_container {
+  display: flex;
+  gap: 120px;
+  background-color: black;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.strength_medium_container h3 {
+  color: rgb(143, 143, 144);
+}
+.strength_medium_container .span_1,
+.span_2,
+.span_3 {
+  height: 20px;
+  width: 10px;
+  background-color: yellow;
+  border: 3px solid yellow;
+}
+.SPAN_container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.SPAN_container .span_4 {
+  height: 20px;
+  width: 10px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+}
+.all_spans {
+  display: flex;
+  gap: 5px;
+}
+
+/* GENERATE button */
+
+.GENERATE {
+  display: flex;
+  background-color: rgb(157, 255, 157);
+  color: black;
+  height: 50px;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.GENERATE:hover {
+  background-color: rgb(202, 255, 195);
+  transition: 0.3s;
+}
+
+/* 📱 Responsive 375px */
+@media (max-width: 375px) {
+  .main_container {
+    margin-top: 150px;
+    gap: 15px;
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  .main_container h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* Password input container */
+  .password_input {
+    width: 330px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .CopyPaste_icon {
+    width: 20px;
+    height: 20px;
+    right: 8px;
+  }
+
+  /* Generate container */
+  .GENERATE_container {
+    width: 100%;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .character_length_container label {
+    font-size: 16px;
+  }
+
+  .character_length_number {
+    font-size: 24px;
+    margin-top: -25px;
+  }
+
+  input[type="range"] {
+    height: 20px;
+  }
+
+  /* Radio buttons */
+  .radio_buttons_container form {
+    gap: 8px;
+  }
+
+  .radio_buttons_container form input {
+    width: 14px;
+    height: 14px;
+  }
+
+  .radio_buttons_container form label {
+    font-size: 14px;
+  }
+
+  /* Strength container */
+  .strength_medium_container {
+    gap: 40px;
+    height: 45px;
+  }
+
+  .strength_medium_container h3 {
+    font-size: 12px;
+  }
+
+  .SPAN_container h2 {
+    font-size: 14px;
+  }
+
+  .all_spans span {
+    width: 8px;
+    height: 20px;
+  }
+
+  /* Generate button */
+  .GENERATE {
+    height: 45px;
+    font-size: 14px;
+    gap: 15px;
+  }
+
+  .GENERATE img {
+    width: 15px;
+    height: 15px;
+  }
+}
